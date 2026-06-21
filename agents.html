@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Become an Agent — Tabangay</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg?v=3">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy: #0c1c3a;
+      --gold: #c8a84b;
+      --gold2: #e2c46e;
+      --white: #ffffff;
+      --off: #f5f6fa;
+      --muted: #8492a6;
+      --border: #e2e8f0;
+      --text: #1a202c;
+    }
+    body { font-family: "Inter", sans-serif; background: var(--off); color: var(--text); min-height: 100vh; display: flex; flex-direction: column; }
+
+    /* NAV */
+    nav { background: var(--navy); padding: 0 64px; height: 68px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(200,168,75,0.3); }
+    .nav-brand { display: flex; align-items: center; gap: 14px; text-decoration: none; }
+    .nav-brand-name { font-size: 1.25rem; font-weight: 800; color: var(--gold); letter-spacing: 0.08em; }
+    .nav-brand-divider { width: 1px; height: 20px; background: rgba(255,255,255,0.2); }
+    .nav-brand-sub { font-size: 0.72rem; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; }
+    .nav-back { font-size: 0.78rem; font-weight: 600; color: rgba(255,255,255,0.5); text-decoration: none; letter-spacing: 0.08em; text-transform: uppercase; transition: color 0.2s; }
+    .nav-back:hover { color: var(--gold); }
+
+    /* HERO STRIP */
+    .page-header { background: var(--navy); padding: 64px 64px 72px; text-align: center; }
+    .eyebrow { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; }
+    .page-header h1 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 900; color: var(--white); letter-spacing: -0.02em; }
+    .page-header p { font-size: 1rem; color: rgba(255,255,255,0.5); margin-top: 16px; max-width: 520px; margin-left: auto; margin-right: auto; line-height: 1.7; }
+
+    /* CONTENT */
+    .content { max-width: 980px; margin: 0 auto; padding: 72px 64px; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; flex: 1; }
+
+    /* PERKS */
+    .perks { display: flex; flex-direction: column; gap: 28px; }
+    .perk { display: flex; gap: 16px; align-items: flex-start; }
+    .perk-icon { width: 44px; height: 44px; background: var(--navy); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; flex-shrink: 0; }
+    .perk h4 { font-size: 0.95rem; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+    .perk p { font-size: 0.84rem; color: var(--muted); line-height: 1.7; }
+    .perks-note { font-size: 0.78rem; color: var(--muted); font-style: italic; margin-top: 8px; padding: 16px; background: var(--white); border-left: 3px solid var(--gold); border-radius: 0 4px 4px 0; line-height: 1.6; }
+
+    /* FORM */
+    .form-card { background: var(--white); border: 1px solid var(--border); border-radius: 8px; padding: 40px; display: flex; flex-direction: column; gap: 20px; }
+    .form-card h3 { font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
+    .f-group { display: flex; flex-direction: column; gap: 6px; }
+    label { font-size: 0.78rem; font-weight: 600; color: var(--navy); letter-spacing: 0.04em; text-transform: uppercase; }
+    input, select, textarea { border: 1px solid var(--border); border-radius: 4px; padding: 12px 14px; font-family: inherit; font-size: 0.9rem; color: var(--text); background: var(--off); outline: none; transition: border 0.2s; }
+    input:focus, select:focus, textarea:focus { border-color: var(--gold); background: var(--white); }
+    textarea { min-height: 110px; resize: vertical; }
+    .f-submit { background: var(--navy); color: var(--white); font-weight: 700; font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; padding: 16px; border-radius: 4px; border: none; cursor: pointer; transition: background 0.2s; width: 100%; }
+    .f-submit:hover { background: var(--gold); color: var(--navy); }
+
+    /* FOOTER */
+    footer { background: var(--navy); padding: 28px 64px; text-align: center; border-top: 1px solid rgba(200,168,75,0.2); }
+    footer p { font-size: 0.78rem; color: rgba(255,255,255,0.25); }
+
+    @media (max-width: 768px) {
+      nav { padding: 0 24px; }
+      .page-header { padding: 48px 24px 56px; }
+      .content { grid-template-columns: 1fr; padding: 48px 24px; gap: 40px; }
+      footer { padding: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-brand" href="index.html">
+    <span class="nav-brand-name">TABANGAY</span>
+    <span class="nav-brand-divider"></span>
+    <span class="nav-brand-sub">Thesis Research Support</span>
+  </a>
+  <a href="index.html" class="nav-back">← Back to Main Site</a>
+</nav>
+
+<div class="page-header">
+  <div class="eyebrow">Work With Us</div>
+  <h1>Become an Agent</h1>
+  <p>Agents are our on-ground representatives at their school. You handle the client — we handle the research. Fill out the form and we'll reach out.</p>
+</div>
+
+<div class="content">
+  <div class="perks">
+    <div class="perk">
+      <div class="perk-icon">💼</div>
+      <div>
+        <h4>Be Your Own Boss</h4>
+        <p>You set your own rate with clients. We give you a fixed service cost — what you charge on top is yours to keep.</p>
+      </div>
+    </div>
+    <div class="perk">
+      <div class="perk-icon">🏫</div>
+      <div>
+        <h4>Assigned to Your School</h4>
+        <p>Each agent is assigned to their own campus. You're the go-to contact for students in your school looking for research support.</p>
+      </div>
+    </div>
+    <div class="perk">
+      <div class="perk-icon">🤝</div>
+      <div>
+        <h4>Full Support From Us</h4>
+        <p>We handle all the research work. You handle the client relationship. No academic expertise required on your end.</p>
+      </div>
+    </div>
+    <div class="perk">
+      <div class="perk-icon">🔒</div>
+      <div>
+        <h4>Confidential Agreement</h4>
+        <p>All agents sign a confidentiality agreement before onboarding. Your identity and our operations stay protected.</p>
+      </div>
+    </div>
+    <div class="perks-note">Full agent agreement and onboarding details will be provided upon contact. Submitting this form is an expression of interest only — no commitment required.</div>
+  </div>
+
+  <div class="form-card">
+    <h3>Agent Application</h3>
+    <div class="f-group">
+      <label>Full Name</label>
+      <input type="text" name="agent_name" placeholder="Your full name" required>
+    </div>
+    <div class="f-group">
+      <label>Contact Number</label>
+      <input type="tel" name="agent_contact" placeholder="e.g. 09xx xxx xxxx" required>
+    </div>
+    <div class="f-group">
+      <label>School / University</label>
+      <input type="text" name="agent_school" placeholder="School you want to represent" required>
+    </div>
+    <div class="f-group">
+      <label>Year Level / Status</label>
+      <select name="agent_year">
+        <option value="">Select</option>
+        <option>1st Year</option>
+        <option>2nd Year</option>
+        <option>3rd Year</option>
+        <option>4th Year</option>
+        <option>Graduate Student</option>
+        <option>Alumni</option>
+      </select>
+    </div>
+    <div class="f-group">
+      <label>Why do you want to be an agent? <span style="font-weight:400;text-transform:none;color:var(--muted)">(optional)</span></label>
+      <textarea name="agent_reason" placeholder="Tell us a bit about yourself and why you're interested."></textarea>
+    </div>
+    <button type="submit" class="f-submit">Send Application</button>
+  </div>
+</div>
+
+<footer>
+  <p>&copy; 2026 Tabangay. All rights reserved. &nbsp;&middot;&nbsp; Davao City, Philippines</p>
+</footer>
+
+</body>
+</html>
